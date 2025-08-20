@@ -1,0 +1,166 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111325;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: normal;
+  align-content: normal;
+  min-height: 100vh;
+  & > * {
+    padding: 0 15%;
+  }
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 50px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav {
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 10px;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.main-content {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.movies-section {
+  .movies-grid {
+    display: flex;
+            gap: 15px;
+        flex-wrap: wrap;
+
+  }
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      color: white;
+    }
+    a {
+      margin: 20px;
+      line-height: 25px;
+      font-weight: bold;
+      display: block;
+      text-decoration: none;
+      color: #685ed6;
+    }
+  }
+  .movie-card {
+    width: 250px;
+    background-color: #24253d;
+    border-radius: 5px;
+    .movie-poster {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      height: 250px;
+      background-color: #2b2b41;
+      color: #4b4b61;
+      font-size: 48px;
+      line-height: 250px;
+      text-align: center;
+    }
+    .movie-info {
+      padding: 10px;
+      .movie-title {
+        color: white;
+      }
+      .movie-genre {
+        color: #685ed6;
+        display: inline-block;
+        border-radius: 10px;
+        background-color: #2c2a4f;
+        padding: 5px;
+      }
+      .movie-desc {
+        color: #58576e;
+      }
+      .btn-details {
+        color: white;
+        display: inline-block;
+        border-radius: 5px;
+        background-color: #685ed6;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.site-footer {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 120px;
+  .footer-grid {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    .footer-brand {
+      flex-grow: 0;
+    }
+    .footer-links {
+      margin-right: 45%;
+      align-content: center;
+    }
+  }
+  .copyright {
+    border-top: 1px solid lightgray;
+    color: lightgray;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.footer-links {
+  a {
+    line-height: 25px;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    color: lightgrey;
+  }
+}
+
+.logo {
+  line-height: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  span {
+    color: #685ed6;
+  }
+}
+
+header {
+  background-color: #181b2e;
+}
+
+footer {
+  background-color: #181b2e;
+}
