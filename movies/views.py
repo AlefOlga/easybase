@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseNotFound
 
 from .models import Movie
@@ -25,7 +25,13 @@ def add_movie(request):
     return HttpResponse('Добавление фильма')
 
 def show_movie(request, post_id):
-    return HttpResponse(f'Страница фильма с Id = {post_id}')
+    movie = get_object_or_404(Movie, pk=post_id)
+    param = {
+        'menu': menu,
+        'title': movie.title,
+        'movie': movie,
+    }
+    return render(request, 'movies/movie_detail.html', context=param)
 
 def show_director(request, director_id):
     return HttpResponse(f'Страница режиссера с Id = {director_id}')
