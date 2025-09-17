@@ -34,7 +34,7 @@ class DirectorAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(Watchlist)
-class WatchlistAdmin(admin, ModelAdmin):
+class WatchlistAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'movie', 'watched_on')
     list_filter = ('user', 'movie')
     
